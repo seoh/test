@@ -8,12 +8,45 @@
 
 		
 
+		<link rel="modulepreload" href="/test/app/start-0329e7f6.js">
+		<link rel="modulepreload" href="/test/app/chunks/vendor-be6510b4.js">
+		<link rel="modulepreload" href="/test/app/chunks/paths-45dac81d.js">
+		<link rel="modulepreload" href="/test/app/pages/__layout.svelte-15fb847e.js">
+		<link rel="modulepreload" href="/test/app/chunks/stores-0c6278d4.js">
+		<link rel="modulepreload" href="/test/app/pages/settings/__layout.svelte-b09270a2.js">
+		<link rel="modulepreload" href="/test/app/pages/settings/profile.svelte-28374870.js">
 		<link rel="stylesheet" href="/test/app/assets/start-a8cd1609.css">
 		<link rel="stylesheet" href="/test/app/assets/pages/__layout.svelte-b279ef06.css">
 		<link rel="stylesheet" href="/test/app/assets/pages/settings/__layout.svelte-00cc605e.css">
 		<link rel="stylesheet" href="/test/app/assets/pages/settings/notifications.svelte-3c89c65b.css">
 
-		
+		<script type="module">
+			import { start } from "/test/app/start-0329e7f6.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"/test","assets":"/test"},
+				session: {},
+				host: location.host,
+				route: false,
+				spa: false,
+				trailing_slash: "always",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/test/app/pages/__layout.svelte-15fb847e.js"),
+						import("/test/app/pages/settings/__layout.svelte-b09270a2.js"),
+						import("/test/app/pages/settings/profile.svelte-28374870.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/settings/profile/",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
 	</head>
 	<body>
 		<div id="svelte">

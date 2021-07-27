@@ -8,11 +8,42 @@
 
 		
 
+		<link rel="modulepreload" href="/test/app/start-0329e7f6.js">
+		<link rel="modulepreload" href="/test/app/chunks/vendor-be6510b4.js">
+		<link rel="modulepreload" href="/test/app/chunks/paths-45dac81d.js">
+		<link rel="modulepreload" href="/test/app/pages/__layout.svelte-15fb847e.js">
+		<link rel="modulepreload" href="/test/app/chunks/stores-0c6278d4.js">
+		<link rel="modulepreload" href="/test/app/pages/settings.svelte-9d8693b8.js">
 		<link rel="stylesheet" href="/test/app/assets/start-a8cd1609.css">
 		<link rel="stylesheet" href="/test/app/assets/pages/__layout.svelte-b279ef06.css">
 		<link rel="stylesheet" href="/test/app/assets/pages/settings.svelte-2c5df251.css">
 
-		
+		<script type="module">
+			import { start } from "/test/app/start-0329e7f6.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"/test","assets":"/test"},
+				session: {},
+				host: location.host,
+				route: false,
+				spa: false,
+				trailing_slash: "always",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/test/app/pages/__layout.svelte-15fb847e.js"),
+						import("/test/app/pages/settings.svelte-9d8693b8.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/settings/",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
 	</head>
 	<body>
 		<div id="svelte">
@@ -25,8 +56,8 @@
 
 <main class="svelte-1l5lemn">
 
-<header class="svelte-v60ryi"><nav class="svelte-v60ryi"><ul class="svelte-v60ryi"><li class="svelte-v60ryi"><a sveltekit:prefetch href="/settings/profile" class="svelte-v60ryi">Profile</a></li>
-	<li class="svelte-v60ryi"><a sveltekit:prefetch href="/settings/notifications" class="svelte-v60ryi">Notification</a></li></ul></nav></header>
+<header class="svelte-v60ryi"><nav class="svelte-v60ryi"><ul class="svelte-v60ryi"><li class="svelte-v60ryi"><a sveltekit:prefetch href="/test/settings/profile" class="svelte-v60ryi">Profile</a></li>
+	<li class="svelte-v60ryi"><a sveltekit:prefetch href="/test/settings/notifications" class="svelte-v60ryi">Notification</a></li></ul></nav></header>
 
 <div class="content svelte-v60ryi"><h1>Settings</h1>
 
