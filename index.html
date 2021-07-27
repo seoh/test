@@ -4,31 +4,63 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		
+		<title>Home</title>
 
 		
 
-		<link rel="modulepreload" href="/test/app/start-44e30d9e.js">
+		<link rel="modulepreload" href="/test/app/start-c277d2a3.js">
 		<link rel="modulepreload" href="/test/app/chunks/vendor-be6510b4.js">
 		<link rel="modulepreload" href="/test/app/chunks/paths-45dac81d.js">
+		<link rel="modulepreload" href="/test/app/pages/__layout.svelte-5e4bb6a5.js">
+		<link rel="modulepreload" href="/test/app/chunks/stores-0c6278d4.js">
+		<link rel="modulepreload" href="/test/app/pages/index.svelte-68d1fa88.js">
 		<link rel="stylesheet" href="/test/app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/test/app/assets/pages/__layout.svelte-b279ef06.css">
+		<link rel="stylesheet" href="/test/app/assets/pages/index.svelte-949109e2.css">
 
 		<script type="module">
-			import { start } from "/test/app/start-44e30d9e.js";
+			import { start } from "/test/app/start-c277d2a3.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"/test","assets":"/test"},
 				session: {},
 				host: location.host,
 				route: true,
-				spa: true,
+				spa: false,
 				trailing_slash: "always",
-				hydrate: null
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/test/app/pages/__layout.svelte-5e4bb6a5.js"),
+						import("/test/app/pages/index.svelte-68d1fa88.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
 			});
 		</script>
 	</head>
 	<body>
 		<div id="svelte">
+
+
+<header class="svelte-3jqq2v"><nav class="svelte-3jqq2v"><ul class="svelte-3jqq2v"><li class="svelte-3jqq2v"><a sveltekit:prefetch href="/test/" class="svelte-3jqq2v">Home</a></li>
+	<li class="svelte-3jqq2v"><a sveltekit:prefetch href="/test/about" class="svelte-3jqq2v">About</a></li>
+	<li class="svelte-3jqq2v"><a sveltekit:prefetch href="/test/settings" class="svelte-3jqq2v">Setting</a></li></ul></nav>
+</header>
+
+<main class="svelte-1l5lemn">
+
+<section class="svelte-1jlhe5t"><span>hell world</span>
+</section>
+</main>
+
+
 
 	
 </div>
